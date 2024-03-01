@@ -145,6 +145,7 @@ func (k *KVV2Test) Setup(client *api.Client, mountName string, topLevelConfig *T
 		Options: map[string]string{
 			"version": "2",
 		},
+		SealWrap: true,
 	})
 	if err != nil {
 		return nil, fmt.Errorf("error mounting kv secrets engine: %v", err)
